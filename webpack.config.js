@@ -1,12 +1,12 @@
-var path = require('path');
+var path = require("path");
 var htmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
-  entry: path.resolve(__dirname, 'src', 'index.js'),
+  entry: path.resolve(__dirname, "src", "index.js"),
   mode: "development",
 
   output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js',
+    path: path.resolve(__dirname, "./dist"),
+    filename: "bundle.js",
   },
   plugins: [
     new htmlWebpackPlugin({
@@ -15,10 +15,24 @@ module.exports = {
     }),
   ],
   module: {
-    rules: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: ['babel-loader'],
-    },],
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"],
+      },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(svg|png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+          },
+        ],
+      }
+    ],
   },
 };

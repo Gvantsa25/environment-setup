@@ -1,0 +1,52 @@
+.comment {
+  background-color:  hsl(0, 0%, 100%);
+  border: 2px solid hsl(223, 19%, 93%);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.comment-content {
+  margin-left: 20px;
+}
+
+.comment-content > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.user-info img {
+  width: 40px;
+  height: 40px;
+}
+
+.reply {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.reply button {
+  color: hsl(238, 40%, 52%);
+  background: none;
+  outline: none;
+  border:none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.all-replies {
+  margin-left: 50px;
+  border-left: 2px solid hsl(220, 3%, 82%);
+  padding-left: 50px;
+}

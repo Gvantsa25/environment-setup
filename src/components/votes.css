@@ -1,0 +1,22 @@
+.votes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(223, 19%, 93%);
+  padding: 10px;
+  border-radius: 10px;
+  max-height: 100px;
+}
+
+.votes img {
+  width: 20px;
+  cursor: pointer;
+  padding: 3px;
+}
+
+.votes span {
+  font-size: 18px;
+  padding: 5px 0;
+  color: hsl(238, 40%, 52%);
+}

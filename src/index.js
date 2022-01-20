@@ -1,17 +1,8 @@
-// const a = 3 ?? 5;
+import "./index.css";
+import data from "../data.json";
+import Comment from "./components/comment";
 
-// const obj = {
-//   a: {
-//     b: {
-//       c: 12,
-//     }
-//   }
-// }
-// if (obj.a && obj.a.b && obj.a.b.c) {
-//   console.log(obj.a.b.c);
-// }
-// console.log(obj?.a?.b?.c);
-import * as logger from "./logger";
-import * as utils from "./utils";
-logger.log("my message");
-utils.currentDate();
+
+const root = document.getElementById('container');
+
+data.comments.forEach(comment => root.appendChild(Comment(comment)));

@@ -11,6 +11,7 @@ app.use(
     publicPath: config.output.publicPath,
   })
 );
+app.use('/images', express.static(path.join(__dirname, '..','images')));
 app.get("/", function (req, res) {
   res.sendFile(path.join(__dirname, "../src/index.html"));
 });
